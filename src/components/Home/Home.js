@@ -1,14 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './Home.css';
 import video from '../../media/kiting.mp4';
 import GitHub from '../../media/GitHub.png';
 import Email from '../../media/Email.png';
 
 export default() => {
+
+    const [loading,
+        setLoading] = useState('loading-meta-data');
+
     return (
-        <div className="Home">
+        <div className={`Home ${loading}`}>
             <div className="bg-video">
-                <video className="content" autoPlay muted loop playbackrate={.75}>
+                <video
+                    className="content"
+                    autoPlay
+                    muted
+                    loop
+                    playbackrate={1}
+                    onLoadedData={() => setLoading(null)}>
                     <source src={video} type="video/mp4"/>
                     Your browser is not supported!
                 </video>
@@ -25,7 +35,6 @@ export default() => {
                     <img src={Email} className="github" alt="Email Link"/>
                 </a>
             </div>
-
         </div>
     )
 }
