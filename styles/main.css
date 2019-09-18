@@ -1,0 +1,50 @@
+#main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+    background: url('/media/kiting-video-first-frame.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#main .bg-video .content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#main #info {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1s;
+}
+
+#main #info .sub-title {
+    font-size: 1.6rem;
+    font-weight: lighter;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
