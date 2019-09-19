@@ -26,8 +26,7 @@
     object-fit: cover;
 }
 
-#main #info {
-    text-align: center;
+#main #main-content {
     font-size: 3rem;
     font-weight: bold;
     display: flex;
@@ -35,7 +34,7 @@
     animation: fadeIn 1s;
 }
 
-#main #info .sub-title {
+#main #main-content .sub-title {
     font-size: 1.6rem;
     font-weight: lighter;
 }

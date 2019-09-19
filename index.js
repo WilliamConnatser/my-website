@@ -1,99 +1,123 @@
+//Slow down videos
 const bgVideo = document.getElementById('main-video')
-bgVideo.playbackRate = 0.4
+bgVideo.playbackRate = .7
 const portfolioVideo = document.getElementById('portfolio-video')
-portfolioVideo.playbackRate = 0.3
+portfolioVideo.playbackRate = .7
 
-const navButtons = document.getElementsByClassName('nav-button')
+//Select applicable DOM elements
+const navToggleButtons = document.getElementsByClassName('nav-button')
 const navButtonClose = document.getElementById('nav-button-close')
 const navButtonOpen = document.getElementById('nav-button-open')
 const navBar = document.getElementById('nav-bar')
-const info = document.getElementById('info')
+const mainContent = document.getElementById('main-content')
 const portfolioLink = document.getElementById('portfolio-link')
 const mainLink = document.getElementById('main-link')
 const main = document.getElementById('main')
 const portfolio = document.getElementById('portfolio')
+const portfolioContent = document.getElementById('portfolio-content')
+const porfolioNav = document.getElementsByClassName('portfolio-nav')
+const portfolioSlides = document.getElementsByClassName('slide')
 
+//Initialize state
 let showMain = true
 let showNav = false
+let currentSlide = 0
+setPortfolioSlide()
 
-for (let i = 0; i < navButtons.length; i++) {
-    navButtons[i].onclick = () => {
-        //If the nav is being opened
+//Add event listeners to nav open/close button
+for (let i = 0; i < navToggleButtons.length; i++) {
+    navToggleButtons[i].onclick = () => {
+        //If the nav bar is being opened
         if (!showNav) {
-            navBar.style.display = 'flex'
-            info.style.display = 'none'
-            navButtonClose.style.display = 'inline'
-            navButtonOpen.style.display = 'none'
-            navBar.style.animation = 'slideDown .5s'
+            openNavBar()
         }
-        //Else the nav is being closed
+        //Else the nav bar is being closed
         else {
-            navBar.style.animation = 'slideUp .5s'
-            info.style.display = 'flex'
-            portfolio.style.display = 'flex'
-            navButtonClose.style.display = 'none'
-            navButtonOpen.style.display = 'inline'
+            closeNavBar()
         }
-        showNav = !showNav
     }
 }
 
+//Listen for nav item clicks on these two anchor tags
+//If clicked then change the view
 portfolioLink.onclick = () => {
-    main.style.display = 'none'
-    portfolio.style.display = 'flex'
-    navBar.style.animation = 'slideUp .5s'
-    navButtonClose.style.display = 'none'
-    navButtonOpen.style.display = 'inline'
-    mainLink.style.display = 'flex'
-    portfolioLink.style.display = 'none'
-    showNav = false
-    showMain = false
+    toggleViews()
+    closeNavBar()
 }
-
 mainLink.onclick = () => {
-    portfolio.style.display = 'none'
-    main.style.display = 'flex'
-    navBar.style.animation = 'slideUp .5s'
-    navButtonClose.style.display = 'none'
-    navButtonOpen.style.display = 'inline'
-    portfolioLink.style.display = 'flex'
-    mainLink.style.display = 'none'
-    showMain = true
-    showNav = false
+    toggleViews()
+    closeNavBar()
 }
 
+//After the nav bar animation ends
 navBar.addEventListener('animationend', () => {
-    console.log(showNav, 'showNav')
+    //Check to see if it was just closed
+    //If so then hide it
     if (!showNav) {
         navBar.style.display = 'none'
     }
 });
 
-const porfolioNav = document.getElementsByClassName('portfolio-nav')
-const portfolioSlides = document.getElementsByClassName('portfolio-slide')
-let portfolioSlide = 0
+//Handle carousel navigation clicks
 for (let i = 0; i < porfolioNav.length; i++) {
     porfolioNav[i].onclick = (e) => {
+        const lastSlide = currentSlide
         if (e.target.id.includes('left')) {
-            if (portfolioSlide-1 >= 0) {
-                portfolioSlide = portfolioSlide - 1
+            if (currentSlide-1 >= 0) {
+                currentSlide = currentSlide - 1
             }
         } else {
-            if (portfolioSlide+1 < portfolioSlides.length) {
-                portfolioSlide = portfolioSlide + 1
+            if (currentSlide+1 < portfolioSlides.length) {
+                currentSlide = currentSlide + 1
             }
         }
-        setPortfolioSlide()
+        setPortfolioSlide(lastSlide)
     }
 }
 
-setPortfolioSlide()
-function setPortfolioSlide() {
-    for (let i = 0; i < portfolioSlides.length; i++) {
-        if (portfolioSlide === i) {
-            portfolioSlides[i].style.display = 'flex'
-        } else {
-            portfolioSlides[i].style.display = 'none'
-        }
+//Hide last slide and show new slide
+function setPortfolioSlide(lastSlide) {
+    //lastSlide will be 0 occassionally, so check for undefined instead
+    if (lastSlide !== undefined) {
+        portfolioSlides[lastSlide].style.display = 'none'
     }
+    portfolioSlides[currentSlide].style.display = 'flex'
+}
+
+
+function closeNavBar() {
+    navButtonClose.style.display = 'none'
+    navButtonOpen.style.display = 'inline'
+    navBar.style.animation = 'slideUp .5s'
+    showNav = false
+    //If on the main page or portfolio page
+    //Then we need to toggle different divs
+    if (showMain) {
+        mainContent.style.display = 'flex'
+    } else {
+        portfolioContent.style.display = 'flex'
+    }
+}
+
+function openNavBar() {
+    navBar.style.display = 'flex'
+    navButtonClose.style.display = 'inline'
+    navButtonOpen.style.display = 'none'
+    navBar.style.animation = 'slideDown .5s'
+    showNav = true
+    //If on the main page or portfolio page
+    //Then we need to toggle different divs
+    if (showMain) {
+        mainContent.style.display = 'none'
+    } else {
+        portfolioContent.style.display = 'none'
+    }
+}
+
+function toggleViews() {
+    portfolio.style.display = showMain ? 'flex' : 'none'
+    main.style.display = showMain ? 'none' : 'flex'
+    portfolioLink.style.display = showMain ? 'none' : 'flex'
+    mainLink.style.display = showMain ? 'flex' : 'none'
+    showMain = !showMain
 }

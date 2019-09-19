@@ -7,29 +7,10 @@
     align-items: center;
 }
 
-#portfolio .bg-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    overflow: hidden;
-    background: url('/media/kiting-video-first-frame.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#portfolio .bg-video .content {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
-
 #portfolio #portfolio-content {
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background: linear-gradient(to bottom, rgba(69,72,77,1) 0%,rgba(0,0,0,1) 100%);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -41,15 +22,43 @@
     cursor: pointer;
 }
 
-#portfolio .portfolio-slide {
+#portfolio .slide {
     height: 100%;
     width: 100%;
     display: none;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    flex-direction: column;
 }
 
-#portfolio .portfolio-slide .title {
+#portfolio .slide .title {
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: bolder;
+}
+
+#portfolio .slide .tech {
+    font-size: 2.5rem;
+}
+
+#portfolio .slide .body {
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+@media(max-width: 400px) {
+    #portfolio .slide .title {
+        font-size: 2rem;
+    }
+
+    #portfolio .slide .screenshot {
+        max-width: 100%;
+    }
+
+    #portfolio .slide .tech {
+        font-size: 1.5rem;
+    }
+
+    #portfolio .slide .body {
+        font-size: 1.2rem;
+    }    
 }
