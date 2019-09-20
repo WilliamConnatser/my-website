@@ -17,7 +17,7 @@
     overflow: hidden;
     background: url('/media/kiting-video-first-frame.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 
 #main .bg-video .content {
@@ -35,6 +35,7 @@
 }
 
 #main #main-content .sub-title {
+    font-family: 'Geo Sans Light';
     font-size: 1.6rem;
     font-weight: lighter;
 }

@@ -4,7 +4,7 @@
     right: 2rem;
     font-size: 3rem;
     cursor: pointer;
-    z-index: 2;
+    z-index: 3;
     outline: none;
     animation: spin .5s;
 }
@@ -23,8 +23,17 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.5);
     animation: slideUp .5s;
+}
+
+#nav-bar .bg-video-tint {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background: rgba(0, 0, 0, 0.4);
 }
 
 #nav-bar .bg-video {
@@ -33,11 +42,9 @@
     left: 0;
     height: 100%;
     width: 100%;
-    z-index: -1;
+    z-index: 1;
     overflow: hidden;
-    background: url('/media/kiting-video-first-frame.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 #nav-bar .bg-video .content {
@@ -52,6 +59,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    z-index: 3;
 }
 
 #nav-bar .nav-text {
@@ -62,6 +70,12 @@
 
 #nav-bar #main-link {
     display: none
+}
+
+@media(max-height: 415px) {
+    #nav-bar {
+        flex-direction: row
+    }
 }
 
 @keyframes slideDown {
@@ -87,6 +101,6 @@
         transform: rotate(-180deg)
     }
     to {
-        rotate: rotate(0deg)
+        transform: rotate(0deg)
     }
 }

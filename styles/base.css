@@ -1,11 +1,18 @@
 h1,h2,h3,h4,h5,h6 {
-    font-family: 'Geo Sans Light';
+	font-family: 'Geo Sans Light';
     font-size: 3rem;
 }
 
 * {
 	color: whitesmoke;
 	text-align: center;
+	font-family: 'Geo Sans Light';
+}
+
+a {
+	color: gray;
+	text-decoration: underline;
+	text-decoration-style: dashed;
 }
 
 @font-face {

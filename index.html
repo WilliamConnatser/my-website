@@ -38,6 +38,7 @@
       <i class="fas fa-times"></i>
     </div>
     <div id="nav-bar">
+      <div class="bg-video-tint"></div>
       <div class="bg-video">
         <video id="portfolio-video" class="content" autoPlay muted loop>
           <source src="media/trees.mp4" type="video/mp4" />
@@ -61,33 +62,50 @@
         <i class="far fa-envelope"></i>
         <span class="nav-text">Email</span>
       </a>
-      <a class="nav-icon" href="https://linkedin.com/in/William-Connatser">
-        <i class="fab fa-linkedin-in"></i>
-        <span class="nav-text">LinkedIn</span>
-      </a>
       <a class="nav-icon" href="https://www.github.com/WilliamConnatser">
         <i class="fab fa-github"></i>
         <span class="nav-text">GitHub</span>
+      </a>
+      <a class="nav-icon" href="https://linkedin.com/in/William-Connatser">
+        <i class="fab fa-linkedin-in"></i>
+        <span class="nav-text">LinkedIn</span>
       </a>
       <a class="nav-icon" href="https://twitter.com/ConnatserW">
         <i class="fab fa-twitter"></i>
         <span class="nav-text">Twitter</span>
       </a>
     </div>
-    <div id="portfolio">
-      <div id="portfolio-content">
-        <i id="portfolio-nav-left" class="fas fa-angle-left portfolio-nav"></i>
+    <div id="portfolio-wrapper">
+      <div id="portfolio">
         <div class="slide">
-
-          <h1 class="title">Maze MUD Escape</h1>
-          <img class="screenshot" src="https://placeimg.com/640/320/tech">
-          <h2 class="tech">HTML &#x25AB; CSS &#x25AB; POSTGRES &#x25AB; NODE</h2>
+          <div class="screenshot-wrapper">
+            <img class="screenshot" src="/media/maze-mud-landing-page.png">
+            <img class="screenshot" src="/media/maze-mud-lobby-1.png">
+            <img class="screenshot" src="/media/maze-mud-lobby-2.png">
+            <img class="screenshot" src="/media/maze-mud-gameplay.png">
+          </div>
           <div class="body">
-            Maze MUD Escape is a multiplayer and interactive maze escape game leveraging
-            HTML5 Canvas, Web Workers, and Web Sockets. The game was made in only a few
-            days for a Lambda School project. We were tasked to build out our backend
-            using the Python framework Django, which we had never used before. Learning
-            how to learn is one of the core tenants of Lambda School's curriculum.
+            <h1 class="title">Maze MUD Escape</h1>
+            <div class="middle-group">
+              <h2 class="tech">
+                HTML CSS REACT WEBWORKERS CANVAS
+                PYTHON DJANGO POSTGRES WEBSOCKETS
+              </h2>
+              <h3 class="link-group">              
+                <a class="link screenshot-link" href="#">Screenshots</a>
+                <a class="link" href="#">Live Site</a>
+                <a class="link" href="#">Code</a>
+              </h3>
+            </div>
+            <div class="description">
+              Maze MUD Escape is a multiplayer and interactive maze escape game which was
+              made in only a few days for a Lambda School project. We were tasked to build
+              out our backend using the Python framework Django, which we had never used
+              before. Learning how to learn is one of the core tenants of Lambda School's
+              curriculum. Web Workers were leveraged for non-blocking rendering of the game
+              on an HTML5 canvas, and Web Sockets were utilized in several ways to enhance
+              the multi-player game experience.
+            </div>
           </div>
         </div>
         <div class="slide">
@@ -102,7 +120,11 @@
             <img src="https://placeimg.com/640/320/tech">
           </div>
         </div>
-        <i id="portfolio-nav-right" class="fas fa-angle-right portfolio-nav"></i>
+        <div id="portfolio-nav-bar">
+          <i id="portfolio-nav-left" class="fas fa-angle-left portfolio-nav portfolio"></i>
+          <i id="screenshot-close" class="fas fas fa-times portfolio-nav portfolio"></i>
+          <i id="portfolio-nav-right" class="fas fa-angle-right portfolio-nav portfolio"></i>
+        </div>
       </div>
     </div>
   </body>
