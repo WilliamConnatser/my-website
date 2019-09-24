@@ -63,29 +63,37 @@ navBar.addEventListener('animationend', () => {
 //Handle portfolio carousel navigation clicks
 for (let i = 0; i < portfolioNav.length; i++) {
     portfolioNav[i].onclick = (e) => {
-        console.log(portfolioNav[i])
-        if (e.target.classList.contains('portfolio')) {            
+        if (e.target.classList.contains('portfolio')) {  
+            changeCarouselState('screenshot', null)
             if (e.target.id.includes('left')) {
-                if (currentProject-1 >= 0) {
+                if (currentProject - 1 >= 0) {
                     changeCarouselState('portfolio', currentProject - 1, currentProject)
+                } else {
+                    changeCarouselState('portfolio', portfolioSlides.length - 1, currentProject)
                 }
             } else {
-                if (currentProject+1 < portfolioSlides.length) {
+                if (currentProject + 1 < portfolioSlides.length) {
                     changeCarouselState('portfolio', currentProject + 1, currentProject)
+                } else {
+                    changeCarouselState('portfolio', 0, currentProject)
                 }
             }
+            changeCarouselState('screenshot', 0)
         } else {
             if (e.target.id.includes('left')) {
                 if (currentScreenshot - 1 >= 0) {
                     changeCarouselState('screenshot', currentScreenshot - 1, currentScreenshot)
+                } else {
+                    changeCarouselState('screenshot', screenshotWrappers[currentProject].children.length - 1, currentScreenshot)
                 }
             } else if (e.target.id.includes('right')) {
                 if (currentScreenshot + 1 < screenshotWrappers[currentProject].children.length) {
                     changeCarouselState('screenshot', currentScreenshot + 1, currentScreenshot)
+                } else {
+                    changeCarouselState('screenshot', 0, currentScreenshot)
                 }
             } else {
                 //Close screenshots
-                console.log('close..')
                 toggleScreenshots()
             }
         }
@@ -110,10 +118,20 @@ function changeCarouselState(type, current, last) {
     } else {
         //Else change the screenshot carousel state
         if (last !== undefined) {
+            //If a previous slide was provided then hide the previous slide
             screenshotWrappers[currentProject].children[last].style.display = 'none'
+            screenshotWrappers[currentProject].children[current].style.display = 'flex'
+            currentScreenshot = current
+        } else if (current === null) {
+            //If null was provided for the current slide
+            //Then hide the current slide and reset the screenshot
+            screenshotWrappers[currentProject].children[currentScreenshot].style.display = 'none'
+            currentScreenshot = 0
+        } else {
+            //Else there's no last slide to hide
+            screenshotWrappers[currentProject].children[current].style.display = 'flex'
+            currentScreenshot = current
         }
-        screenshotWrappers[currentProject].children[current].style.display = 'flex'
-        currentScreenshot = current
     }
 }
 
