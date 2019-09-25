@@ -1,9 +1,3 @@
-//Slow down videos
-const bgVideo = document.getElementById('main-video')
-bgVideo.playbackRate = .7
-const portfolioVideo = document.getElementById('portfolio-video')
-portfolioVideo.playbackRate = .7
-
 //Nav Elements
 const navToggleButtons = document.getElementsByClassName('nav-button')
 const navButtonClose = document.getElementById('nav-button-close')
