@@ -1,0 +1,28 @@
+#technologies {
+    margin-top: -10vh;
+    background: black;
+    width: 100vw;
+    padding: 20vh 0;
+}
+
+#technologies .heading {
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+#technologies .tech-container {
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+#technologies .tech-filter {
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    margin: 10px;
+    background: rgba(122, 77, 77, 0);
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+    outline: none;
+    font-weight: bolder;
+    cursor: pointer;
+}

@@ -17,7 +17,15 @@ const portfolioSlideBodies = [...portfolioSlides].map(slide =>slide.getElementsB
 const screenshotLinks = document.getElementsByClassName('screenshot-link')
 const screenshotWrappers = document.getElementsByClassName('screenshot-wrapper')
 const screenshotClose = document.getElementById('screenshot-close')
-
+//Technologies
+const technologiesWrapper = document.querySelector('.tech-container')
+const technologies = Array.from(document.querySelectorAll('.tech-used')).reduce((accumulated, current) => accumulated.concat(current.textContent.replace(/\n/g, '').split(' ').filter(str => str !== "" && !accumulated.includes(str))),[])
+technologies.forEach(tech => {
+    const newButton = document.createElement('button')
+    newButton.textContent = tech
+    newButton.classList.add('tech-filter')
+    technologiesWrapper.appendChild(newButton)
+})
 //Initialize state of app
 let showMain = true
 let showNav = false

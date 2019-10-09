@@ -11,19 +11,13 @@
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/navigation.css">
     <link rel="stylesheet" href="/styles/portfolio.css">
+    <link rel="stylesheet" href="/styles/technologies.css">
   </head>
   <body>
     <script defer src="index.js" type="text/javascript"></script>
     <script src="https://kit.fontawesome.com/36a71d741a.js"></script>
-
-    <div id="main">
-      <div id="main-content">
-        <h1>William Connatser</h1>
-        <div class="sub-title">
-          Full Stack Engineering
-        </div>
-      </div>
-    </div>
+    
+    <!-- Navigation -->
     <button id="nav-button-open" class="nav-button">
       <i class="fas fa-bars"></i>
     </div>
@@ -32,11 +26,11 @@
     </button>
     <div id="nav-bar">
       <div class="bg-video-tint"></div>
-      <a class="nav-icon" id="portfolio-link" href="#">
+      <a class="nav-icon" id="portfolio-link">
         <i class="far fa-folder-open"></i>
         <span class="nav-text">Portfolio</span>
       </a>
-      <a class="nav-icon" id="main-link" href="#">
+      <a class="nav-icon" id="main-link" href="/">
         <i class="fas fa-home"></i>
         <span class="nav-text">Home</span>
       </a>
@@ -61,6 +55,22 @@
         <span class="nav-text">Twitter</span>
       </a>
     </div>
+    
+    <!-- Main Page -->
+    <div id="main">
+      <div id="main-content">
+        <h1>William Connatser</h1>
+        <div class="sub-title">
+          Full Stack Engineering
+        </div>
+      </div>
+    </div>
+    <div id="technologies">
+      <h2 class="heading">I speak:</h2>
+      <div class="tech-container">
+        
+      </div>
+    </div>
     <div id="portfolio-wrapper">
       <div id="portfolio">
         <div class="slide">
@@ -73,7 +83,7 @@
           <div class="body">
             <h1 class="title">Maze MUD Escape</h1>
             <div class="middle-group">
-              <h2 class="tech">
+              <h2 class="tech-used">
                 HTML CSS REACT WEBWORKERS CANVAS
                 PYTHON DJANGO POSTGRES WEBSOCKETS
               </h2>
@@ -106,7 +116,7 @@
           <div class="body">
             <h1 class="title">ChallengeJS</h1>
             <div class="middle-group">
-              <h2 class="tech">
+              <h2 class="tech-used">
                 HTML CSS REACT WEBWORKERS
                 NODE EXPRESS POSTGRES AUTH0
               </h2>
@@ -136,7 +146,7 @@
           <div class="body">
             <h1 class="title">Stockly</h1>
             <div class="middle-group">
-              <h2 class="tech">
+              <h2 class="tech-used">
                 HTML CSS REACT NODE
                 EXPRESS POSTGRES
               </h2>
@@ -169,7 +179,7 @@
           <div class="body">
             <h1 class="title">Bitcoin Maximalism</h1>
             <div class="middle-group">
-              <h2 class="tech">
+              <h2 class="tech-used">
                 HTML CSS VUE BTCPAY
                 NODE GRAPHQL MONGODB
               </h2>

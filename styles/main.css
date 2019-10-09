@@ -1,5 +1,5 @@
 #main {
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -8,6 +8,9 @@
     background: url('/media/bg-dark-mountain.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
 }
 
 #main #main-content {
