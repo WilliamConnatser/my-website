@@ -1,0 +1,39 @@
+#contact {
+   font-size: 3rem;
+   background: rgb(238, 255, 0);
+   margin-top: -10vh;
+   padding: 20vh 0 10vh;
+   -webkit-clip-path: polygon(0 10vh, 100% 0, 100% 100%, 0 100%);
+   clip-path: polygon(0 10vh, 100% 0, 100% 100%, 0 100%);
+   display: flex;
+   justify-content: center;
+}
+
+@media (max-width: 450px) {
+   #contact {
+      flex-direction: column;
+   }
+}
+
+#contact .contact-icon {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 20px;
+   color: hsl(120, 79%, 4%);
+   font-size: 3rem;
+   cursor: pointer;
+   text-decoration: none;
+}
+
+#contact .contact-icon .far,
+.fab {
+   color: hsl(120, 79%, 4%);
+}
+
+#contact .contact-icon .contact-text {
+   color: hsl(120, 79%, 4%);
+   font-size: 1.8rem;
+   font-family: 'Geo Sans Light';
+   text-transform: uppercase;
+}
