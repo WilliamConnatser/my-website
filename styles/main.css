@@ -6,19 +6,6 @@
    justify-content: center;
    align-items: center;
    background: blueviolet;
-   background: url('/media/bg-dark-mountain.jpg');
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-position: center;
-   -webkit-clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
-   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
-}
-
-#main #shooting-star {
-   position: absolute;
-   left: -15vw;
-   top: 30vh;
-   animation: shootingStar 1s linear 1.5s;
 }
 
 #main #main-content {
@@ -42,52 +29,5 @@
    }
    to {
       opacity: 1;
-   }
-}
-
-@keyframes shootingStar {
-   from {
-      left: -10vw;
-      top: 30vh;
-   }
-   to {
-      left: 90vw;
-      top: -10vh;
-   }
-}
-
-@media (max-width: 450px) {
-   #main #shooting-star {
-      left: -40vw;
-      transform: rotate(-10deg);
-   }
-   @keyframes shootingStar {
-      from {
-         left: -10vw;
-         top: 30vh;
-      }
-      to {
-         left: 90vw;
-         top: -10vh;
-      }
-   }
-}
-
-@media (max-height: 415px) {
-   #main #shooting-star {
-      transform: rotate(15deg);
-      animation: shootingStar 1s linear 1s;
-   }
-   @keyframes shootingStar {
-      from {
-         position: absolute;
-         left: -10vw;
-         top: 20vh;
-      }
-      to {
-         position: absolute;
-         left: 90vw;
-         top: -10vh;
-      }
    }
 }

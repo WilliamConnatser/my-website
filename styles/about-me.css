@@ -1,0 +1,74 @@
+#about-me {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   background: orangered;
+   margin-top: -10vh;
+   padding: 20vh 0;
+   -webkit-clip-path: polygon(0 10vh, 100% 0, 100% 100%, 0 100%);
+   clip-path: polygon(0 10vh, 100% 0, 100% 100%, 0 100%);
+}
+
+#about-me .heading {
+   font-size: 3rem;
+   margin: 30px;
+}
+
+@media (max-width: 450px) {
+   #about-me .heading {
+      margin-bottom: 30px;
+   }
+}
+
+@media (max-height: 415px) {
+   #about-me .heading {
+      margin-bottom: 10px;
+   }
+}
+
+#about-me .about-me-container {
+   width: 75%;
+   max-width: 700px;
+   margin: 0 auto;
+   padding: 5px 10px;
+   transform: perspective(1000px);
+   transform-style: preserve-3d;
+   z-index: 2;
+}
+
+@media (max-width: 450px) {
+   #about-me .about-me-container {
+      width: 90%;
+   }
+}
+
+@media (max-height: 415px) {
+   #about-me .about-me-container {
+      width: 95%;
+      max-width: 100%;
+   }
+}
+
+#about-me .about-me-paragraph {
+   margin: 10px;
+   font-size: 1.5rem;
+   transform: translateZ(20px);
+}
+
+#about-me .about-me-paragraph:hover {
+   font-weight: bolder;
+}
+
+@media (max-width: 450px) {
+   #about-me .about-me-paragraph {
+      font-size: 1.25rem;
+      margin: 10px 5px;
+   }
+}
+
+@media (max-height: 415px) {
+   #about-me .about-me-paragraph {
+      font-size: 1.25rem;
+      margin: 5px;
+   }
+}
