@@ -63,23 +63,23 @@ for (let i = 0; i < navToggleButtons.length; i++) {
 
 //Listen for nav item clicks on these two anchor tags
 //If clicked then change the view
-portfolioLink.onclick = () => {
-   //Todo: Scroll to portfolio section
-   toggleNavBar()
-}
-mainLink.onclick = () => {
-   //Todo: Scroll to main section
-   toggleNavBar()
-}
+// portfolioLink.onclick = () => {
+//    //Todo: Scroll to portfolio section
+//    toggleNavBar()
+// }
+// mainLink.onclick = () => {
+//    //Todo: Scroll to main section
+//    toggleNavBar()
+// }
 
 //After the nav bar animation ends
-navBar.addEventListener('animationend', () => {
-   //Check to see if it was just closed
-   //If so then hide it
-   if (!showNav) {
-      navBar.style.display = 'none'
-   }
-})
+// navBar.addEventListener('animationend', () => {
+//    //Check to see if it was just closed
+//    //If so then hide it
+//    if (!showNav) {
+//       navBar.style.display = 'none'
+//    }
+// })
 
 //Handle portfolio carousel navigation clicks
 for (let i = 0; i < portfolioNav.length; i++) {
