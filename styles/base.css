@@ -1,29 +1,35 @@
-h1,h2,h3,h4,h5,h6 {
-	font-family: 'Geo Sans Light';
-    font-size: 3rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family: 'Geo Sans Light';
+   font-size: 3rem;
 }
 
 * {
-	color: whitesmoke;
-	text-align: center;
-	font-family: 'Geo Sans Light';
+   color: whitesmoke;
+   text-align: center;
+   font-family: 'Geo Sans Light';
 }
 
 a {
-	text-decoration: underline;
-	text-decoration-style: dashed;
+   text-decoration: underline;
+   text-decoration-style: dashed;
+   cursor: pointer;
 }
 
 @font-face {
-	font-family: 'Geo Sans Light';
-	font-style: normal;
-	font-weight: 400;
-	src: url('../media/GeosansLight.ttf') format('truetype');
+   font-family: 'Geo Sans Light';
+   font-style: normal;
+   font-weight: 400;
+   src: url('../media/GeosansLight.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: 'Roman Serif';
-	font-style: normal;
-	font-weight: 400;
-	src: url('../media/RomanSerif.ttf') format('truetype');
+   font-family: 'Roman Serif';
+   font-style: normal;
+   font-weight: 400;
+   src: url('../media/RomanSerif.ttf') format('truetype');
 }

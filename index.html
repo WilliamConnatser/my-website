@@ -1,30 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="shortcut icon" href="media/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <title>William Connatser</title>
-    <link rel="stylesheet" href="/styles/reset.css">
-    <link rel="stylesheet" href="/styles/base.css">
-    <link rel="stylesheet" href="/styles/main.css">
-    <link rel="stylesheet" href="/styles/navigation.css">
-    <link rel="stylesheet" href="/styles/portfolio.css">
-  </head>
-  <body>
-    <script defer src="index.js" type="text/javascript"></script>
-    <script src="https://kit.fontawesome.com/36a71d741a.js"></script>
+   <head>
+      <meta charset="utf-8" />
+      <link rel="shortcut icon" href="media/favicon.ico" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#000000" />
+      <title>William Connatser</title>
+      <link rel="stylesheet" href="/styles/reset.css" />
+      <link rel="stylesheet" href="/styles/base.css" />
+      <link rel="stylesheet" href="/styles/main.css" />
+      <link rel="stylesheet" href="/styles/navigation.css" />
+      <link rel="stylesheet" href="/styles/portfolio.css" />
+      <link rel="stylesheet" href="/styles/technologies.css" />
+   </head>
+   <body>
+      <script defer src="index.js" type="text/javascript"></script>
+      <script src="https://kit.fontawesome.com/36a71d741a.js"></script>
 
-    <div id="main">
-      <div id="main-content">
-        <h1>William Connatser</h1>
-        <div class="sub-title">
-          Full Stack Engineering
-        </div>
-      </div>
-    </div>
-    <button id="nav-button-open" class="nav-button">
+      <!--
+      Navigation Panel
+    -->
+      <!-- <button id="nav-button-open" class="nav-button">
       <i class="fas fa-bars"></i>
     </div>
     <button id="nav-button-close" class="nav-button">
@@ -32,11 +28,11 @@
     </button>
     <div id="nav-bar">
       <div class="bg-video-tint"></div>
-      <a class="nav-icon" id="portfolio-link" href="#">
+      <a class="nav-icon" id="portfolio-link">
         <i class="far fa-folder-open"></i>
         <span class="nav-text">Portfolio</span>
       </a>
-      <a class="nav-icon" id="main-link" href="#">
+      <a class="nav-icon" id="main-link" href="/">
         <i class="fas fa-home"></i>
         <span class="nav-text">Home</span>
       </a>
@@ -60,140 +56,295 @@
         <i class="fab fa-twitter"></i>
         <span class="nav-text">Twitter</span>
       </a>
-    </div>
-    <div id="portfolio-wrapper">
-      <div id="portfolio">
-        <div class="slide">
-          <div class="screenshot-wrapper">
-            <img class="screenshot" src="/media/maze-mud-landing-page.png">
-            <img class="screenshot" src="/media/maze-mud-lobby-1.png">
-            <img class="screenshot" src="/media/maze-mud-lobby-2.png">
-            <img class="screenshot" src="/media/maze-mud-gameplay.png">
-          </div>
-          <div class="body">
-            <h1 class="title">Maze MUD Escape</h1>
-            <div class="middle-group">
-              <h2 class="tech">
-                HTML CSS REACT WEBWORKERS CANVAS
-                PYTHON DJANGO POSTGRES WEBSOCKETS
-              </h2>
-              <h3 class="link-group">              
-                <a class="link screenshot-link" href="#">Screenshots</a>
-                <a class="link" href="https://maze-mud-client.herokuapp.com/">Live Site</a>
-                <a class="link" href="https://github.com/cs19-maze-mud">Code</a>
-              </h3>
+    </div> -->
+
+      <!--
+      Main Section
+    -->
+      <div id="main">
+         <div id="main-content">
+            <img
+               id="shooting-star"
+               src="media/shooting-star.png"
+               height="50px"
+               width="100px"
+            />
+            <h1>William Connatser</h1>
+            <div class="sub-title">
+               Full Stack Engineering
             </div>
-            <div class="description">
-              Maze MUD Escape is a multiplayer and interactive maze escape game which was
-              made in only a few days for a Lambda School project. We were tasked to build
-              out our backend using the Python framework Django, which we had never used
-              before. Learning how to learn is one of the core tenants of Lambda School's
-              curriculum. Web Workers were leveraged for non-blocking rendering of the game
-              on an HTML5 canvas, and Web Sockets were utilized in several ways to enhance
-              the multi-player game experience.
-            </div>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="screenshot-wrapper">
-            <img class="screenshot" src="/media/challengejs-landing-page.png">
-            <img class="screenshot" src="/media/challengejs-browse-challenges.png">
-            <img class="screenshot" src="/media/challengejs-complete-challenge.png">
-            <img class="screenshot" src="/media/challengejs-user-profile.png">
-            <img class="screenshot" src="/media/challengejs-leaderboard.png">
-            <img class="screenshot" src="/media/challengejs-create-challenge.png">
-          </div>
-          <div class="body">
-            <h1 class="title">ChallengeJS</h1>
-            <div class="middle-group">
-              <h2 class="tech">
-                HTML CSS REACT WEBWORKERS
-                NODE EXPRESS POSTGRES AUTH0
-              </h2>
-              <h3 class="link-group">
-                <a class="link screenshot-link" href="#">Screenshots</a>
-                <a class="link" href="https://www.challengejs.com/">Live Site</a>
-                <a class="link" href="https://github.com/labs13-clone">Code</a>
-              </h3>
-            </div>
-            <div class="description">
-              ChallengeJS is a JavaScript code challenge web site which was built in just
-              one month for a Lambda School project. Running and validating arbitrary code
-              which is written client-side proved to be a nice challenge. Not only could
-              the code be malicious, but it could also have errors and/or stack overflows.
-              We ended up leveraging Web Workers in order to run the code client-side, and
-              if the code errored (or timed) out, then our application would not come crashing
-              to a halt.
-            </div>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="screenshot-wrapper">
-            <img class="screenshot" src="/media/stockly-landing-page.png">
-            <img class="screenshot" src="/media/stockly-main-view.png">
-            <img class="screenshot" src="/media/stockly-login.png">
-          </div>
-          <div class="body">
-            <h1 class="title">Stockly</h1>
-            <div class="middle-group">
-              <h2 class="tech">
-                HTML CSS REACT NODE
-                EXPRESS POSTGRES
-              </h2>
-              <h3 class="link-group">
-                <a class="link screenshot-link" href="#">Screenshots</a>
-                <a class="link" href="https://www.getstockly.com/">Live Site</a>
-                <a class="link" href="https://github.com/lambda-stockly">Code</a>
-              </h3>
-            </div>
-            <div class="description">
-              Stockly helps you make informative decisions as to what actions to make given a
-              stock's price, Twitter sentiment and careful analysis from a machine learning
-              model. You can save stocks to your favorites, and view recent values and price
-              movements. This project was built in only a few days with a small group of
-              Lambda School students. I was solely responsible for the backend of this project.
-              One of the engineering challenges I faced was reducing the amount of API calls to
-              AlphaVantage due to rate limit issues, so I created an extra table to cache price
-              data which was then updated if the stock's information was more than 24 hours old.
-            </div>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="screenshot-wrapper">
-            <img class="screenshot" src="/media/bitcoin-maximalism-landing-page.png">
-            <img class="screenshot" src="/media/bitcoin-maximalism-arguments.png">
-            <img class="screenshot" src="/media/bitcoin-maximalism-account.png">
-            <img class="screenshot" src="/media/bitcoin-maximalism-leaderboard1.png">
-            <img class="screenshot" src="/media/bitcoin-maximalism-leaderboard2.png">
-          </div>
-          <div class="body">
-            <h1 class="title">Bitcoin Maximalism</h1>
-            <div class="middle-group">
-              <h2 class="tech">
-                HTML CSS VUE BTCPAY
-                NODE GRAPHQL MONGODB
-              </h2>
-              <h3 class="link-group">
-                <a class="link screenshot-link" href="#">Screenshots</a>
-                <a class="link" href="https://www.bitcoinmaximalism.com/">Live Site</a>
-                <a class="link" href="https://github.com/WilliamConnatser/bitcoin-maximalism">Code</a>
-              </h3>
-            </div>
-            <div class="description">
-              Bitcoin Maximalism is an educational and social website which helps users explore the
-              nuance surrounding different Bitcoin and cryptocurrency investment theses. Users can 
-              donate Bitcoin via mainnet and/or Lightning Network transactions which boosts their 
-              the weighting of their up-votes and down-votes. Depending on the faction they choose,
-              they can decide which group receives the lionshare of the donations.
-            </div>
-          </div>
-        </div>
-        <div id="portfolio-nav-bar">
-          <button class="portfolio-nav-button"><i id="portfolio-nav-left" class="fas fa-angle-left portfolio-nav portfolio"></i></button>
-          <button class="portfolio-nav-button"><i id="screenshot-close" class="fas fas fa-times portfolio-nav portfolio"></i></button>
-          <button class="portfolio-nav-button"><i id="portfolio-nav-right" class="fas fa-angle-right portfolio-nav portfolio"></i></button>
-        </div>
+         </div>
       </div>
-    </div>
-  </body>
+
+      <!-- 
+      Technologies Section
+    -->
+      <div id="technologies">
+         <div id="technologies-video-overlay"></div>
+         <video id="technologies-video" class="content" autoPlay muted loop>
+            <source src="media/trees.mp4" type="video/mp4" />
+            <source src="media/trees.webm" type="video/webm" />
+            Your browser is not supported!
+         </video>
+         <h2 class="heading">Skills</h2>
+         <div class="tech-container" data-tilt>
+            <!--
+          Technologies are injected via JS.
+          Each unique technology is pulled from the portfolio section
+          From each h2 with the `tech-used` class
+        -->
+         </div>
+      </div>
+
+      <!--
+      Portfolio Section
+    -->
+      <div id="portfolio-wrapper">
+         <div id="portfolio">
+            <div class="slide">
+               <div class="screenshot-wrapper">
+                  <img
+                     class="screenshot"
+                     src="/media/maze-mud-landing-page.png"
+                  />
+                  <img class="screenshot" src="/media/maze-mud-lobby-1.png" />
+                  <img class="screenshot" src="/media/maze-mud-lobby-2.png" />
+                  <img class="screenshot" src="/media/maze-mud-gameplay.png" />
+               </div>
+               <div class="body">
+                  <h1 class="title">Maze MUD Escape</h1>
+                  <div class="middle-group">
+                     <h2 class="tech-used">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JAVASCRIPT</span>
+                        <span>REACT</span>
+                        <span>WEBWORKERS</span>
+                        <span>HTML5 CANVAS</span>
+                        <span>PYTHON</span>
+                        <span>DJANGO</span>
+                        <span>POSTGRES</span>
+                        <span>WEBSOCKETS</span>
+                     </h2>
+                     <h3 class="link-group">
+                        <a class="link screenshot-link">Screenshots</a>
+                        <a
+                           class="link"
+                           href="https://maze-mud-client.herokuapp.com/"
+                           >Live Site</a
+                        >
+                        <a class="link" href="https://github.com/cs19-maze-mud"
+                           >Code</a
+                        >
+                     </h3>
+                  </div>
+                  <div class="description">
+                     Maze MUD Escape is a multiplayer and interactive maze
+                     escape game which was made in only a few days for a Lambda
+                     School project. We were tasked to build out our backend
+                     using the Python framework Django, which we had never used
+                     before. Learning how to learn is one of the core tenants of
+                     Lambda School's curriculum. Web Workers were leveraged for
+                     non-blocking rendering of the game on an HTML5 canvas, and
+                     Web Sockets were utilized in several ways to enhance the
+                     multi-player game experience.
+                  </div>
+               </div>
+            </div>
+            <div class="slide">
+               <div class="screenshot-wrapper">
+                  <img
+                     class="screenshot"
+                     src="/media/challengejs-landing-page.png"
+                  />
+                  <img
+                     class="screenshot"
+                     src="/media/challengejs-browse-challenges.png"
+                  />
+                  <img
+                     class="screenshot"
+                     src="/media/challengejs-complete-challenge.png"
+                  />
+                  <img
+                     class="screenshot"
+                     src="/media/challengejs-user-profile.png"
+                  />
+                  <img
+                     class="screenshot"
+                     src="/media/challengejs-leaderboard.png"
+                  />
+                  <img
+                     class="screenshot"
+                     src="/media/challengejs-create-challenge.png"
+                  />
+               </div>
+               <div class="body">
+                  <h1 class="title">ChallengeJS</h1>
+                  <div class="middle-group">
+                     <h2 class="tech-used">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JAVASCRIPT</span>
+                        <span>REACT</span>
+                        <span>WEBWORKERS</span>
+                        <span>NODE</span>
+                        <span>EXPRESS</span>
+                        <span>POSTGRES</span>
+                        <span>AUTH0</span>
+                     </h2>
+                     <h3 class="link-group">
+                        <a class="link screenshot-link">Screenshots</a>
+                        <a class="link" href="https://www.challengejs.com/"
+                           >Live Site</a
+                        >
+                        <a class="link" href="https://github.com/labs13-clone"
+                           >Code</a
+                        >
+                     </h3>
+                  </div>
+                  <div class="description">
+                     ChallengeJS is a JavaScript code challenge web site which
+                     was built in just one month for a Lambda School project.
+                     Running and validating arbitrary code which is written
+                     client-side proved to be a nice challenge. Not only could
+                     the code be malicious, but it could also have errors and/or
+                     stack overflows. We ended up leveraging Web Workers in
+                     order to run the code client-side, and if the code errored
+                     (or timed) out, then our application would not come
+                     crashing to a halt.
+                  </div>
+               </div>
+            </div>
+            <div class="slide">
+               <div class="screenshot-wrapper">
+                  <img
+                     class="screenshot"
+                     src="/media/stockly-landing-page.png"
+                  />
+                  <img class="screenshot" src="/media/stockly-main-view.png" />
+                  <img class="screenshot" src="/media/stockly-login.png" />
+               </div>
+               <div class="body">
+                  <h1 class="title">Stockly</h1>
+                  <div class="middle-group">
+                     <h2 class="tech-used">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>REACT</span>
+                        <span>JAVASCRIPT</span>
+                        <span>NODE</span>
+                        <span>EXPRESS</span>
+                        <span>POSTGRES</span>
+                     </h2>
+                     <h3 class="link-group">
+                        <a class="link screenshot-link">Screenshots</a>
+                        <a class="link" href="https://www.getstockly.com/"
+                           >Live Site</a
+                        >
+                        <a class="link" href="https://github.com/lambda-stockly"
+                           >Code</a
+                        >
+                     </h3>
+                  </div>
+                  <div class="description">
+                     Stockly helps you make informative decisions as to whether
+                     you should buy, sell or hold equities based off of analysis
+                     from a machine learning model. Save stocks to your
+                     favorites, or view recent values and price movements. This
+                     project was built in only a few days with a small group of
+                     Lambda School students. I was solely responsible for the
+                     backend of this project. One of the engineering challenges
+                     I faced was dealing with rate limit issues with the
+                     AlphaVantage API, so I created a database table to cache
+                     price data to reduce API calls.
+                  </div>
+               </div>
+            </div>
+            <div class="slide">
+               <div class="screenshot-wrapper">
+                  <img
+                     class="screenshot"
+                     src="/media/bitcoin-maximalism-landing-page.png"
+                  />
+                  <img
+                     class="screenshot"
+                     src="/media/bitcoin-maximalism-arguments.png"
+                  />
+                  <img
+                     class="screenshot"
+                     src="/media/bitcoin-maximalism-account.png"
+                  />
+                  <img
+                     class="screenshot"
+                     src="/media/bitcoin-maximalism-leaderboard1.png"
+                  />
+                  <img
+                     class="screenshot"
+                     src="/media/bitcoin-maximalism-leaderboard2.png"
+                  />
+               </div>
+               <div class="body">
+                  <h1 class="title">Bitcoin Maximalism</h1>
+                  <div class="middle-group">
+                     <h2 class="tech-used">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JAVASCRIPT</span>
+                        <span>VUE</span>
+                        <span>BTCPAY</span>
+                        <span>NODE</span>
+                        <span>GRAPHQL</span>
+                        <span>MONGODB</span>
+                     </h2>
+                     <h3 class="link-group">
+                        <a class="link screenshot-link">Screenshots</a>
+                        <a
+                           class="link"
+                           href="https://www.bitcoinmaximalism.com/"
+                           >Live Site</a
+                        >
+                        <a
+                           class="link"
+                           href="https://github.com/WilliamConnatser/bitcoin-maximalism"
+                           >Code</a
+                        >
+                     </h3>
+                  </div>
+                  <div class="description">
+                     Bitcoin Maximalism is an educational and social website
+                     which helps users explore the nuance surrounding different
+                     Bitcoin and cryptocurrency investment theses. Users can
+                     donate Bitcoin via mainnet and/or Lightning Network
+                     transactions which boosts their the weighting of their
+                     up-votes and down-votes. Depending on the faction they
+                     choose, they can decide which group receives the lionshare
+                     of the donations.
+                  </div>
+               </div>
+            </div>
+            <div id="portfolio-nav-bar">
+               <button class="portfolio-nav-button portfolio-nav-button-left">
+                  <i
+                     id="portfolio-nav-left"
+                     class="fas fa-angle-left portfolio-nav portfolio"
+                  ></i>
+               </button>
+               <button class="portfolio-nav-button portfolio-nav-button-close">
+                  <i
+                     id="screenshot-close"
+                     class="fas fas fa-times portfolio-nav portfolio"
+                  ></i>
+               </button>
+               <button class="portfolio-nav-button portfolio-nav-button-right">
+                  <i
+                     id="portfolio-nav-right"
+                     class="fas fa-angle-right portfolio-nav portfolio"
+                  ></i>
+               </button>
+            </div>
+         </div>
+      </div>
+      <!-- vanilla-tilt -->
+      <script type="text/javascript" src="vanilla-tilt.js"></script>
+   </body>
 </html>
