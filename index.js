@@ -55,11 +55,11 @@ changeCarouselState('portfolio', 0)
 changeCarouselState('screenshot', 0)
 
 //Add event listeners to nav open/close button
-for (let i = 0; i < navToggleButtons.length; i++) {
-   navToggleButtons[i].onclick = () => {
-      toggleNavBar()
-   }
-}
+// for (let i = 0; i < navToggleButtons.length; i++) {
+//    navToggleButtons[i].onclick = () => {
+//       toggleNavBar()
+//    }
+// }
 
 //Listen for nav item clicks on these two anchor tags
 //If clicked then change the view
