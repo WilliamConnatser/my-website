@@ -3,7 +3,7 @@
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   background: limegreen;
+   background: rgb(0, 218, 0);
    margin-top: -10vh;
    padding: 20vh 0;
    -webkit-clip-path: polygon(0 10vh, 100% 0, 100% 100%, 0 100%);
@@ -130,7 +130,6 @@
 #portfolio .slide .middle-group .link-group .link {
    margin: 20px;
    transform: translateZ(20px);
-   color: hsl(120, 79%, 4%);
 }
 #portfolio .slide .middle-group .link-group .link:hover,
 .link:active {
@@ -140,7 +139,7 @@
 @media (max-width: 450px) {
    #portfolio .slide .middle-group .link-group .link {
       font-size: 1.25rem;
-      margin: 1.5rem 0;
+      margin: 1.5rem;
    }
 }
 @media (max-height: 415px) {
