@@ -2,7 +2,7 @@
    display: flex;
    justify-content: center;
    flex-direction: column;
-   background: orangered;
+   background: #ff5d22;
    margin-top: -10vh;
    padding: 20vh 0;
    -webkit-clip-path: polygon(0 10vh, 100% 0, 100% 100%, 0 100%);
